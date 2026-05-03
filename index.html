@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dapur Gen Z</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+</head>
+
+<body class="bg-blue-100">
+
+<!-- NAVBAR -->
+<nav class="bg-blue-500 text-white p-4 flex justify-between items-center sticky top-0 z-50">
+  <h1 class="font-bold text-xl">Dapur Gen Z 👩‍🍳🍚</h1>
+
+  <button onclick="toggleMenu()" class="md:hidden text-2xl">☰</button>
+
+  <div class="hidden md:flex gap-6 font-medium">
+    <a href="#">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#order">Pesan</a>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="hidden bg-blue-400 text-white p-4 md:hidden">
+  <a href="#menu" class="block mb-2">Menu</a>
+  <a href="#order" class="block">Pesan</a>
+</div>
+
+<!-- HERO / CAROUSEL -->
+<body class="bg-blue-100">
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="bakso benner.jpeg" class="d-block w-100 object-cover" style="height:350px;">
+      </div>
+
+      <div class="carousel-item">
+        <img src="mie jeletot benner.jpeg" class="d-block w-100 object-cover" style="height:350px;">
+      </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+  </div>
+
+  <div class="text-center py-8">
+    <h2 class="text-3xl font-bold">Hai Selamat Datang di Dapur Gen Z! 👋</h2>
+    <p class="text-gray-600 mt-2">Yuk pesan makanan favoritmu ╰(*°▽°*)╯</p>
+  </div>
+</section>
+
+<!-- SEARCH -->
+<div class="max-w-5xl mx-auto p-4">
+  <input type="text" id="search" placeholder="Cari menu..." onkeyup="cariMenu()"
+    class="w-full p-3 border rounded-xl shadow">
+</div>
+
+<!-- KATEGORI -->
+<div class="max-w-5xl mx-auto p-4 flex gap-3 flex-wrap justify-center">
+  <button onclick="setKategori('all')" class="bg-blue-200 px-4 py-2 rounded-xl">Semua</button>
+  <button onclick="setKategori('utama')" class="bg-blue-200 px-4 py-2 rounded-xl">Utama</button>
+  <button onclick="setKategori('tambahan')" class="bg-blue-200 px-4 py-2 rounded-xl">Tambahan</button>
+  <button onclick="setKategori('menu tambahan')" class="bg-blue-200 px-4 py-2 rounded-xl">Menu Paket</button>
+</div>
+</div>
+
+<!-- MENU -->
+<section id="menu" class="max-w-6xl mx-auto p-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+  <!-- ITEM -->
+  <div class="produk bg-white rounded-xl shadow p-3 text-center" data-kategori="utama">
+    <img src="BAKSO GEN Z.jpeg" class="w-full h-36 object-cover rounded-lg mb-3">
+    <h3 class="nama font-bold text-sm">Bakso Gen Z</h3>
+    <p class="text-blue-600 font-bold mb-2">Rp13.000</p>
+    <button onclick="tambahKeKeranjang('Bakso Gen Z',13000)"
+      class="w-full bg-blue-500 text-white py-2 rounded-lg">Tambah</button>
+  </div>
+
+  <div class="produk bg-white rounded-xl shadow p-3 text-center" data-kategori="utama">
+    <img src="MIE JELETOT GEN Z.jpeg" class="w-full h-36 object-cover rounded-lg mb-3">
+    <h3 class="nama font-bold text-sm">Mie Jeletot</h3>
+    <p class="text-blue-600 font-bold mb-2">Rp10.000</p>
+    <button onclick="tambahKeKeranjang('Mie Jeletot',10000)"
+      class="w-full bg-blue-500 text-white py-2 rounded-lg">Tambah</button>
+  </div>
+
+  <div class="produk bg-white rounded-xl shadow p-3 text-center" data-kategori="tambahan">
+    <img src="CEKER .jpeg" class="w-full h-36 object-cover rounded-lg mb-3">
+    <h3 class="nama font-bold text-sm">Ceker (Khusus Bakso)</h3>
+    <p class="text-blue-600 font-bold mb-2">Rp3.000</p>
+    <button onclick="tambahKeKeranjang('Ceker',3000)"
+      class="w-full bg-blue-500 text-white py-2 rounded-lg">Tambah</button>
+  </div>
+
+  <div class="produk bg-white rounded-xl shadow p-3 text-center" data-kategori="tambahan">
+    <img src="PANGSIT.jpeg" class="w-full h-36 object-cover rounded-lg mb-3">
+    <h3 class="nama font-bold text-sm">Pangsit (Khusus Mie Jeletot)</h3>
+    <p class="text-blue-600 font-bold mb-2">Rp3.000</p>
+    <button onclick="tambahKeKeranjang('Pangsit',3000)"
+      class="w-full bg-blue-500 text-white py-2 rounded-lg">Tambah</button>
+  </div>
+
+</section>
+
+<!-- KERANJANG -->
+<div class="max-w-3xl mx-auto bg-white rounded-xl shadow p-5 mt-6">
+  <h2 class="text-xl font-bold mb-4">🛒 Keranjang</h2>
+  <ul id="cartList"></ul>
+  <p class="font-bold mt-3">Total: Rp<span id="total">0</span></p>
+</div>
+
+<!-- FORM -->
+<section id="order" class="max-w-3xl mx-auto bg-white rounded-xl shadow p-5 mt-6 mb-10">
+  <h2 class="text-2xl font-bold text-center mb-5">Form Pemesanan</h2>
+
+  <input id="nama" type="text" placeholder="👤Nama" class="w-full border p-3 rounded mb-3">
+<input id="meja" type="text" placeholder="🍽️Nomor Meja" class="w-full border p-3 rounded mb-3">
+<textarea id="catatan" placeholder="📃Catatan" class="w-full border p-3 rounded mb-3"></textarea>
+
+  <button onclick="kirimWA()" class="w-full bg-blue-500 text-white py-3 rounded-lg">
+    Pesan Sekarang
+  </button>
+</section>
+
+<!-- SCRIPT -->
+<script>
+let keranjang = [];
+
+function toggleMenu(){
+  document.getElementById("mobileMenu").classList.toggle("hidden");
+}
+
+function tambahKeKeranjang(nama, harga){
+  let item = keranjang.find(p => p.nama === nama);
+  if(item){ item.qty++; }
+  else{ keranjang.push({nama, harga, qty:1}); }
+  renderKeranjang();
+}
+
+function renderKeranjang(){
+  let list = document.getElementById("cartList");
+  let total = 0;
+  list.innerHTML = "";
+
+  keranjang.forEach((item,index)=>{
+    let subtotal = item.harga * item.qty;
+    total += subtotal;
+
+    list.innerHTML += `
+    <li class="flex justify-between border-b py-2">
+      ${item.nama} x${item.qty} - Rp${subtotal}
+      <button onclick="hapusItem(${index})">❌</button>
+    </li>`;
+  });
+
+  document.getElementById("total").innerText = total;
+}
+
+function hapusItem(index){
+  keranjang.splice(index,1);
+  renderKeranjang();
+}
+
+function cariMenu(){
+  let input = document.getElementById("search").value.toLowerCase();
+  let produk = document.getElementsByClassName("produk");
+
+  for(let i=0;i<produk.length;i++){
+    let nama = produk[i].getElementsByClassName("nama")[0].innerText.toLowerCase();
+    produk[i].style.display = nama.includes(input) ? "block" : "none";
+  }
+}
+
+function setKategori(kategori){
+  let produk = document.getElementsByClassName("produk");
+
+  for(let i=0;i<produk.length;i++){
+    let k = produk[i].getAttribute("data-kategori");
+    produk[i].style.display = (kategori==="all" || k===kategori) ? "block":"none";
+  }
+}
+
+function kirimWA(){
+  let nama = document.getElementById("nama").value;
+let meja = document.getElementById("meja").value;
+
+  if(nama==="" || meja==="" || keranjang.length===0){
+    alert("Lengkapi dulu!");
+    return;
+  }
+
+  let pesan = `Halo Admin Dapur Gen Z 🍚\n\nNama: ${nama}\nMeja: ${meja}\n\nPesanan:\n`;
+
+  keranjang.forEach(item=>{
+    pesan += `- ${item.nama} x${item.qty}\n`;
+  });
+
+  let total = keranjang.reduce((s,i)=>s+i.harga*i.qty,0);
+  pesan += `\nTotal: Rp${total}`;
+
+  window.open(`https://wa.me/6285817326805?text=${encodeURIComponent(pesan)}`,"_blank");
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
