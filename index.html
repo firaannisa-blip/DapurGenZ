@@ -15,10 +15,10 @@
   />
 </head>
 
-<body class="bg-blue-100">
+<body class="bg-red-100">
 
 <!-- NAVBAR -->
-<nav class="bg-blue-500 text-white p-4 flex justify-between items-center sticky top-0 z-50">
+<nav class="bg-red-500 text-white p-4 flex justify-between items-center sticky top-0 z-50">
   <h1 class="font-bold text-xl">Dapur Gen Z 👩‍🍳🍚</h1>
 
   <button onclick="toggleMenu()" class="md:hidden text-2xl">☰</button>
@@ -31,22 +31,22 @@
 </nav>
 
 <!-- MOBILE MENU -->
-<div id="mobileMenu" class="hidden bg-blue-400 text-white p-4 md:hidden">
+<div id="mobileMenu" class="hidden bg-red-400 text-white p-4 md:hidden">
   <a href="#menu" class="block mb-2">Menu</a>
   <a href="#order" class="block">Pesan</a>
 </div>
 
 <!-- HERO / CAROUSEL -->
-<body class="bg-blue-100">
+<body class="bg-red-100">
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://firaannisa-blip.github.io/Dapur_Gen-Z/" class="d-block w-100 object-cover" style="height:350px;">
+        <img src="BAKSO.jpeg" class="d-block w-100 object-cover" style="height:350px;">
       </div>
 
       <div class="carousel-item">
-        <img src="mie jeletot benner.jpeg" class="d-block w-100 object-cover" style="height:350px;">
+        <img src="MIE JLETOT.jpeg" class="d-block w-100 object-cover" style="height:350px;">
       </div>
 
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -73,10 +73,10 @@
 
 <!-- KATEGORI -->
 <div class="max-w-5xl mx-auto p-4 flex gap-3 flex-wrap justify-center">
-  <button onclick="setKategori('all')" class="bg-blue-200 px-4 py-2 rounded-xl">Semua</button>
-  <button onclick="setKategori('utama')" class="bg-blue-200 px-4 py-2 rounded-xl">Utama</button>
-  <button onclick="setKategori('tambahan')" class="bg-blue-200 px-4 py-2 rounded-xl">Tambahan</button>
-  <button onclick="setKategori('menu tambahan')" class="bg-blue-200 px-4 py-2 rounded-xl">Menu Paket</button>
+  <button onclick="setKategori('all')" class="bg-red-200 px-4 py-2 rounded-xl">Semua</button>
+  <button onclick="setKategori('utama')" class="bg-red-200 px-4 py-2 rounded-xl">Utama</button>
+  <button onclick="setKategori('tambahan')" class="bg-red-200 px-4 py-2 rounded-xl">Tambahan</button>
+  <button onclick="setKategori('bundling')" class="bg-red-200 px-4 py-2 rounded-xl">Bundling</button>
 </div>
 </div>
 
@@ -87,37 +87,56 @@
   <div class="produk bg-white rounded-xl shadow p-3 text-center" data-kategori="utama">
     <img src="BAKSO GEN Z.jpeg" class="w-full h-36 object-cover rounded-lg mb-3">
     <h3 class="nama font-bold text-sm">Bakso Gen Z</h3>
-    <p class="text-blue-600 font-bold mb-2">Rp13.000</p>
+    <p class="text-red-600 font-bold mb-2">Rp13.000</p>
     <button onclick="tambahKeKeranjang('Bakso Gen Z',13000)"
-      class="w-full bg-blue-500 text-white py-2 rounded-lg">Tambah</button>
+      class="w-full bg-red-500 text-white py-2 rounded-lg">Tambah</button>
   </div>
 
   <div class="produk bg-white rounded-xl shadow p-3 text-center" data-kategori="utama">
     <img src="MIE JELETOT GEN Z.jpeg" class="w-full h-36 object-cover rounded-lg mb-3">
     <h3 class="nama font-bold text-sm">Mie Jeletot</h3>
-    <p class="text-blue-600 font-bold mb-2">Rp10.000</p>
+    <p class="text-red-600 font-bold mb-2">Rp10.000</p>
     <button onclick="tambahKeKeranjang('Mie Jeletot',10000)"
-      class="w-full bg-blue-500 text-white py-2 rounded-lg">Tambah</button>
+      class="w-full bg-red-500 text-white py-2 rounded-lg">Tambah</button>
   </div>
 
   <div class="produk bg-white rounded-xl shadow p-3 text-center" data-kategori="tambahan">
     <img src="CEKER .jpeg" class="w-full h-36 object-cover rounded-lg mb-3">
     <h3 class="nama font-bold text-sm">Ceker (Khusus Bakso)</h3>
-    <p class="text-blue-600 font-bold mb-2">Rp3.000</p>
+    <p class="text-red-600 font-bold mb-2">Rp3.000</p>
     <button onclick="tambahKeKeranjang('Ceker',3000)"
-      class="w-full bg-blue-500 text-white py-2 rounded-lg">Tambah</button>
+      class="w-full bg-red-500 text-white py-2 rounded-lg">Tambah</button>
   </div>
 
   <div class="produk bg-white rounded-xl shadow p-3 text-center" data-kategori="tambahan">
     <img src="PANGSIT.jpeg" class="w-full h-36 object-cover rounded-lg mb-3">
     <h3 class="nama font-bold text-sm">Pangsit (Khusus Mie Jeletot)</h3>
-    <p class="text-blue-600 font-bold mb-2">Rp3.000</p>
+    <p class="text-red-600 font-bold mb-2">Rp3.000</p>
     <button onclick="tambahKeKeranjang('Pangsit',3000)"
-      class="w-full bg-blue-500 text-white py-2 rounded-lg">Tambah</button>
+      class="w-full bg-red-500 text-white py-2 rounded-lg">Tambah</button>
   </div>
 
 </section>
+<!-- Menu Paket -->
+ <section id="menu" class="max-w-6xl mx-auto p-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 
+<div class="produk bg-white rounded-xl shadow p-3 text-center" data-kategori="bundling">
+    <img src="PAKET NAMPOL REAL.jpeg" class="w-full h-36 object-cover rounded-lg mb-3">
+    <h3 class="nama font-bold text-sm">PAKET NAMPOL</h3>
+    <p class="text-red-600 font-bold mb-2">Rp15.000</p>
+    <button onclick="tambahKeKeranjang('PAKET NAMPOL',15000)"
+      class="w-full bg-red-500 text-white py-2 rounded-lg">Tambah</button>
+  </div>
+
+  <div class="produk bg-white rounded-xl shadow p-3 text-center" data-kategori="bundling">
+    <img src="PAKET HUHAH REAL.jpeg" class="w-full h-36 object-cover rounded-lg mb-3">
+    <h3 class="nama font-bold text-sm">PAKET HUHAH</h3>
+    <p class="text-red-600 font-bold mb-2">Rp18.000</p>
+    <button onclick="tambahKeKeranjang('PAKET HUHAH',18000)"
+      class="w-full bg-red-500 text-white py-2 rounded-lg">Tambah</button>
+  </div>
+</section>
+ 
 <!-- KERANJANG -->
 <div class="max-w-3xl mx-auto bg-white rounded-xl shadow p-5 mt-6">
   <h2 class="text-xl font-bold mb-4">🛒 Keranjang</h2>
@@ -133,7 +152,7 @@
 <input id="meja" type="text" placeholder="🍽️Nomor Meja" class="w-full border p-3 rounded mb-3">
 <textarea id="catatan" placeholder="📃Catatan" class="w-full border p-3 rounded mb-3"></textarea>
 
-  <button onclick="kirimWA()" class="w-full bg-blue-500 text-white py-3 rounded-lg">
+  <button onclick="kirimWA()" class="w-full bg-red-500 text-white py-3 rounded-lg">
     Pesan Sekarang
   </button>
 </section>
@@ -198,14 +217,25 @@ function setKategori(kategori){
 
 function kirimWA(){
   let nama = document.getElementById("nama").value;
-let meja = document.getElementById("meja").value;
+  let meja = document.getElementById("meja").value;
+  let catatan = document.getElementById("catatan").value;
 
   if(nama==="" || meja==="" || keranjang.length===0){
     alert("Lengkapi dulu!");
     return;
   }
 
-  let pesan = `Halo Admin Dapur Gen Z 🍚\n\nNama: ${nama}\nMeja: ${meja}\n\nPesanan:\n`;
+  let pesan = `Hello Admin Dapur Gen Z 
+
+Halo kak, aku mau pesan yaa 
+
+. Nama: ${nama}
+. Nomor Meja: ${meja}
+. Catatan: ${catatan}
+
+────────────
+
+✎ Order List:`;
 
   keranjang.forEach(item=>{
     pesan += `- ${item.nama} x${item.qty}\n`;
@@ -214,7 +244,7 @@ let meja = document.getElementById("meja").value;
   let total = keranjang.reduce((s,i)=>s+i.harga*i.qty,0);
   pesan += `\nTotal: Rp${total}`;
 
-  window.open(`https://wa.me/6285817326805?text=${encodeURIComponent(pesan)}`,"_blank");
+  window.open(`https://wa.me/6281228929321?text=${encodeURIComponent(pesan)}`,"_blank");
 }
 </script>
 
